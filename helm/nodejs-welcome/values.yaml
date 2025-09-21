@@ -4,9 +4,9 @@
 
 replicaCount: 1
 
-secretName: regcred
+secretName: registry-secret
 image:
-  repository: sathyap04/nodejs
+  repository: quay.io/mkzaw/lfs274
   tag: v1
 
 service:
@@ -15,6 +15,6 @@ service:
   port: 8080
 
 ingress:
-  enabled: true
+  enabled: false
   className: "nginx"
   hosts: chart-example.local
